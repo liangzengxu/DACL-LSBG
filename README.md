@@ -1,8 +1,9 @@
-## DACL-LSBG目标检测模型在pytorch当中的实现
+Here's the translated content in English:
+
+## Implementation of DACL-LSBG Object Detection Model in PyTorch
 ---Deep Learning-based Accurate Center Localization for Low Surface Brightness Galaxies
 
-
-### 所需环境
+### Prerequisites
 scipy==1.2.1
 numpy==1.17.0
 matplotlib==3.1.2
@@ -13,25 +14,21 @@ tqdm==4.60.0
 Pillow==8.2.0
 h5py==2.10.0
 
-在pycharm终端输入 pip install -r requirements.txt 批量安装依赖包
- 
-### 数据集
-LSBG数据集存储在在Galaxy_data/Galaxy_1文件夹中，包括图像和标签。
+Install all dependencies in bulk by entering `pip install -r requirements.txt` in the PyCharm terminal.
 
-### 训练 
-使用train.py的默认参数用于训练LSBG数据集，直接运行train.py即可开始训练。
-**训练的权重默认保存在logs文件夹中，可以在train.py中修改。**
+### Dataset
+The LSBG dataset is stored in the `Galaxy_data/Galaxy_1` directory, which includes both images and labels.
 
+### Training 
+The default parameters in `train.py` are used for training the LSBG dataset. Run `train.py` directly to start the training.
+**Training weights are saved in the `logs` directory by default, but this can be modified within `train.py`.**
 
-### 预测
-训练结果预测需要用到两个文件，分别是centernet.py和predict.py。  
-首先需要去centernet.py里面修改model_path。
-   **model_path指向训练好的权值文件，在logs文件夹里。**   
-然后运行predict.py进行检测。
-   **默认对13_val.txt中的图像进行检测，检测结果保存在map_out文件夹中。
-可以修改predict.py中的predict_path和map_out_path改变检测的图像和结果输出的文件夹**
-
-
+### Prediction
+Prediction of the training results requires two files: `centernet.py` and `predict.py`.
+First, you need to modify the `model_path` inside `centernet.py`.
+   **`model_path` should point to the trained weights file located in the `logs` directory.**  
+Then, run `predict.py` to perform the detection.
+   **By default, it detects images in `13_val.txt`. The detection results are saved in the `map_out` directory. You can modify the `predict_path` and `map_out_path` inside `predict.py` to change the images to be detected and the output directory for the results.**
 
 ## Reference
 https://github.com/liangzengxu/DACL-LSBG
