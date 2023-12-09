@@ -1,7 +1,5 @@
-Here's the translated content in English:
-
-## Implementation of DACL-LSBG Object Detection Model in PyTorch
----Deep Learning-based Accurate Center Localization for Low Surface Brightness Galaxies
+## Implementation of GalCenterNet Model in PyTorch
+---Automatic Search for Low Surface Brightness Galaxies from SDSS images Using Deep Learning
 
 ### Prerequisites
 scipy==1.2.1
